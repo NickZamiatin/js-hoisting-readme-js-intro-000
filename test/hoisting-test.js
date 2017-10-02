@@ -19,6 +19,7 @@ describe('hoisting', () => {
 
   describe('callMe', () => {
     it("returns the string 'maybe'", () => {
+      var callMe = "maybe"
       expect(callMe()).to.equal("maybe");
     })
   })
@@ -34,10 +35,8 @@ describe('hoisting', () => {
 
     describe('crazy', () => {
       it("prints 'hey!!!' to the console from the nested function", () => {
-        function crazy() {
+        crazy()
 
-        console.log('hey!!!');
-      }
 
         expect(console.log).to.have.been.called.with("hey!!!")
       })
