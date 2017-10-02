@@ -51,6 +51,10 @@ describe('hoisting', () => {
     describe('sayMyName', () => {
       it("prints 'Kristin' to the console from the nested function", () => {
         sayMyName()
+        function sayMyName() {
+          console.log('Kristin');
+
+        }
         expect(console.log).to.have.been.called.with("Kristin")
       })
     })
